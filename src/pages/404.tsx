@@ -18,6 +18,9 @@ export default function NotFoundPage() {
               className='drop-shadow-glow animate-flicker text-red-500'
             />
             <h1 className='mt-8 text-4xl md:text-6xl'>Page Not Found</h1>
+            <p className='mt-2 text-sm text-gray-800'>
+              The page you are looking for does not exist.
+            </p>
             <ArrowLink className='mt-4 md:text-lg' href='/'>
               Back to Home
             </ArrowLink>
