@@ -32,15 +32,14 @@ const ProfileSection: FunctionComponent<ProfileSectionProps> = ({
       <AnimatePresence>
         {isOpen && (
           <motion.button
-            className='absolute top-24 right-9 w-32 select-none rounded-2xl border-2 border-gray-800 bg-red-500 p-5 font-medium shadow-xl hover:bg-red-600'
-            initial={{ opacity: 0, y: -30 }}
+            className='absolute top-20 right-9 w-36 rounded-full border-2 border-gray-800 bg-red-500 p-2 font-medium shadow-xl hover:bg-red-600 '
+            initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{
               opacity: 0,
-              y: -30,
-              transition: { duration: 0.2 },
+              y: -10,
+              transition: { duration: 0.3 },
             }}
-            variants={sideVariants}
             onClick={() => signOut()}
           >
             Logout
@@ -63,7 +62,9 @@ const ProfileSection: FunctionComponent<ProfileSectionProps> = ({
               className='rounded-full'
             />
           </div>
-          <p className='m-3 select-none font-medium'>{userName ?? 'User'}</p>
+          <p className='m-3 mx-4 select-none font-medium'>
+            {userName ?? 'User'}
+          </p>
         </div>
       </motion.div>
     </>
